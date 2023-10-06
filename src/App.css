@@ -1,0 +1,56 @@
+.carSlider {
+  position: relative;
+  overflow: hidden;
+}
+
+.carContainer .slides {
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nextSlide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: all 0.8s;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.nextSlide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.activeSlide {
+  opacity: 1;
+  transform: translateX(0%);
+  z-index: 0;
+}
+
+.prevSlide {
+  transform: translateX(-100%);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.carActive {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.activeButton {
+  background-color: black;
+}

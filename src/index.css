@@ -1,0 +1,71 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+.carousel {
+  overflow: hidden;
+
+  position: relative;
+}
+.carousel .banner {
+  height: 500px;
+  width: 100vw;
+  /* border:1px solid #000000;   */
+  overflow: hidden;
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: 0px;
+}
+
+.carousel .banner::-webkit-scrollbar {
+  /* display: none; */
+}
+
+.banner .img {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100vw;
+  transition: all ease 0.3s;
+  transform: translateX(100%);
+}
+
+.banner .img img {
+  height: 100%;
+  width: 100vw;
+  object-fit: cover;
+  /* display: none; */
+}
+
+.banner .showImg {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.banner .next {
+  transform: translateX(100%);
+}
+.banner .prev {
+  transform: translateX(-100%);
+}
+
+.controls {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.controls span {
+  background-color: crimson;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  display: block;
+  line-height: 0px;
+  padding: 5px;
+  z-index: 5;
+}
